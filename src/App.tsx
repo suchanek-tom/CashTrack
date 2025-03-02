@@ -1,12 +1,17 @@
-import { Header } from "./layout/Header"
-import { Footer } from "./layout/Footer"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HomePage } from "./pages/HomePage"
+import { NotFound } from "./pages/NotFound"
+
 
 export const App = () =>{
   return(
     <> 
-      <Header />
-      <h1>CashTrack</h1>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
