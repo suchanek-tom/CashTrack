@@ -1,13 +1,12 @@
-import { Button, HStack } from "@chakra-ui/react"
+import { Header } from "./layout/Header"
+import { Footer } from "./layout/Footer"
 
 export const App = () =>{
   return(
     <> 
-      <h1>Test</h1>
-      <HStack>
-        <Button>Click me</Button>
-        <Button>Click me</Button>
-      </HStack>
+      <Header />
+      <h1>CashTrack</h1>
+      <Footer />
     </>
   )
 }
