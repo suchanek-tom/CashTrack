@@ -1,15 +1,19 @@
-import { Sidebar } from "../components/sidebar"
-import { Footer } from "../layout/Footer"
-import { Header } from "../layout/Header"
+import { Box } from "@chakra-ui/react";
+import { Sidebar } from "../components/sidebar";
+import { Footer } from "../layout/Footer";
+import { Header } from "../layout/Header";
 
 export const HomePage = () => {
-    return(
-        <>
+    return (
+        <Box display="flex">
             <Sidebar />
-            <Header />
-            
-                <h1>CashTrack</h1>
-            <Footer />
-        </>
-    )
-}
+            <Box flex="1" ml="60px">
+                <Header />
+                <Box p={4}>
+                    <h1>CashTrack</h1>
+                </Box>
+                <Footer />
+            </Box>
+        </Box>
+    );
+};
